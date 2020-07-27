@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# NOTE: to suppress "Using the last argument as keyword parameters is deprecated" warning in tty-command
+Warning[:deprecated] = false
+
 lib_path = File.expand_path('../lib', __dir__)
 $:.unshift(lib_path) if !$:.include?(lib_path)
 require 'blocky/cli'

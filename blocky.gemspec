@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Abhinav Saxena"]
   spec.email         = ["abhinav061@gmail.com"]
 
-  spec.summary       = %q{Block everything that stops you from doing deep work}
+  spec.summary       = %q{blocky is a commandline line tool to help you easily block websites, and unblock them when you need them}
   #spec.description   = %q{TODO: Write a longer description or delete this line.}
   spec.homepage      = "http://www.abhinav.co/blocky.html"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")

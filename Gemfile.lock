@@ -26,6 +26,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.3)
+    thor (1.0.1)
     tty-color (0.5.1)
     tty-command (0.9.0)
       pastel (~> 0.7.0)
@@ -52,6 +53,7 @@ DEPENDENCIES
   blocky!
   rake (~> 12.0)
   rspec (~> 3.0)
+  thor
   tty-command
   tty-file
 

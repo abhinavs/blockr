@@ -27,7 +27,7 @@ module Blocky
     end
 
     def block(hostnames)
-      return if blank?(hostnames) 
+      return if blank?(hostnames)
 
       hostnames.each do |h|
         @parsed_data[KEY_BLOCKY_HOSTNAMES].push(h) if !blank?(h)
@@ -77,7 +77,6 @@ module Blocky
 
     def parse_file(filename)
       lines = read_file(filename)
-      puts lines.inspect
       parse(lines)
     end
 
@@ -151,7 +150,10 @@ module Blocky
       begin
         cmd = TTY::Command.new
         $stdout.puts "Clearing DNS cache"
-        cmd.run("sudo dscacheutil -flushcache")
+
+        # XXX mac specific
+        out, _ = cmd.run("sudo dscacheutil -flushcache", only_output_on_error: true)
+        $stdout.puts out
       rescue
         $stderr.puts "Couldn't clear the cache, please clear cache manually."
         $strderr.puts "See https://abhinav.co/clear-dns-cache.html to findout command for your operating system"

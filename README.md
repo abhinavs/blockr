@@ -13,14 +13,14 @@ Use this command to block any website you want. It can take one or more websites
 Please take care to add the exact website URL you want to block - a few websites add www as a subdomain and to block them you will have to add that to in the name of the website.
 **Examples**
 ```
-$ # block twitter.com
-$ sudo blocky block twitter.com
+$ # block youtube
+$ sudo blocky block www.youtube.com
 
-$ # use shortcut -b to block twitter.com
-$ sudo blocky -b twitter.com
+$ # use shortcut -b to block youtube
+$ sudo blocky -b www.youtube.com
 
 $ # block multiple websites in one shot
-$ sudo blocky -b twitter.com www.youtube.com
+$ sudo blocky -b www.facebook.com www.youtube.com
 
 $ # take care to provide exact URLs you want to block
 $ sudo blocky -b www.facebook.com m.facebook.com
@@ -31,14 +31,14 @@ Use this command to unblock any website you have previously blocked using blocky
 
 It is a safe command, and does not return error if website was not blocked.
 ```
-$ # unblock twitter.com
-$ sudo blocky unblock twitter.com
+$ # unblock youtube
+$ sudo blocky unblock www.youtube.com
 
-$ # use shortcut -u to unblock twitter.com
-$ sudo blocky -u twitter.com
+$ # use shortcut -u to unblock youtube
+$ sudo blocky -u www.youtube.com
 
 $ # unblock multiple websites in one shot
-$ sudo blocky -u twitter.com www.youtube.com
+$ sudo blocky -u www.facebook.com www.youtube.com
 
 $ # take care to provide exact URLs you want to unblock
 $ sudo blocky -u www.facebook.com m.facebook.com
@@ -78,12 +78,14 @@ $ sudo blocky activate -h
 ```
 
 ###### Please Note
-* Given we are modifying /etc/hosts file, you will have to run blocky with sudo or as a root user.
-* blocky also uses special marker to identify changes done by it, so please don’t manually update entries added by blocky, use blocky commands instead
+* Given we are modifying /etc/hosts file, you will have to run blocky as an administrator or as a root user.
+* blocky also uses special markers to identify changes done by it, so please don’t manually update entries added by blocky, use blocky commands instead
 
 ### TODO
 * Write tests
 * Persist blocked & unlocked settings with activate & deactivate commands
+* Test it on Linux
+* Port it on Windows
 
 
 ## Development
