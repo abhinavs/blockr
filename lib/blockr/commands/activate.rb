@@ -3,16 +3,16 @@
 require_relative '../command'
 require_relative '../manager'
 
-module Blocky
+module Blockr
   module Commands
-    class Activate < Blocky::Command
+    class Activate < Blockr::Command
       def initialize(options)
         @options = options
       end
 
       def execute(input: $stdin, output: $stdout)
         output.puts "Activating focus mode..."
-        manager = Blocky::Manager.new()
+        manager = Blockr::Manager.new()
         manager.activate()
       end
     end

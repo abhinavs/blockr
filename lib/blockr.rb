@@ -1,5 +1,5 @@
-require "blocky/version"
+require "blockr/version"
 
-module Blocky
+module Blockr
   class Error < StandardError; end
 end

@@ -1,9 +1,9 @@
-RSpec.describe "`blocky block` command", type: :cli do
-  it "executes `blocky help block` command successfully" do
-    output = `blocky help block`
+RSpec.describe "`blockr block` command", type: :cli do
+  it "executes `blockr help block` command successfully" do
+    output = `blockr help block`
     expected_output = <<-OUT
 Usage:
-  blocky block WEBSITES...
+  blockr block WEBSITES...
 
 Options:
   -h, [--help], [--no-help]  # Display usage information

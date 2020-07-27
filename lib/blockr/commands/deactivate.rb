@@ -3,18 +3,17 @@
 require_relative '../command'
 require_relative '../manager'
 
-module Blocky
+module Blockr
   module Commands
-    class Deactivate < Blocky::Command
+    class Deactivate < Blockr::Command
       def initialize(options)
         @options = options
       end
 
       def execute(input: $stdin, output: $stdout)
         output.puts "Deactivating focus mode..."
-        manager = Blocky::Manager.new()
+        manager = Blockr::Manager.new()
         manager.deactivate()
-        sudo dscacheutil -flushcache
       end
     end
   end

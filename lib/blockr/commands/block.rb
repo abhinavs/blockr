@@ -3,18 +3,18 @@
 require_relative '../command'
 require_relative '../manager'
 
-module Blocky
+module Blockr
   module Commands
-    class Unblock < Blocky::Command
+    class Block < Blockr::Command
       def initialize(websites, options)
         @websites = websites
         @options = options
       end
 
       def execute(input: $stdin, output: $stdout)
-        output.puts "Unblocking websites..."
-        manager = Blocky::Manager.new()
-        manager.unblock(@websites)
+        output.puts "Blocking websites..."
+        manager = Blockr::Manager.new()
+        manager.block(@websites)
       end
     end
   end

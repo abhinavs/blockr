@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in blocky.gemspec
+# Specify your gem's dependencies in blockr.gemspec
 gemspec
 
 gem "thor"

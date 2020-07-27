@@ -1,6 +1,6 @@
-RSpec.describe Blocky do
+RSpec.describe Blockr do
   it "has a version number" do
-    expect(Blocky::VERSION).not_to be nil
+    expect(Blockr::VERSION).not_to be nil
   end
 
   it "does something useful" do

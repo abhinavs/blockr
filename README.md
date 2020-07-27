@@ -1,85 +1,96 @@
-# blocky
+# blockr
 
-Blocky is a command line tool to help you easily block websites, and unblock them when you need them. It modifies /etc/hosts file and add appropriate configuration.
+blockr is a command line tool to help you easily block websites, and unblock them when you need them. It modifies /etc/hosts file and add appropriate configuration.
 
-In today’s world though it is difficult to continue blocking a few websites because they are quite useful too. And hence, blocky lets you activate and deactivate focus mode, so that you are able to access blocked websites when you are relaxing.
+In today’s world though it is difficult to permanently block websites because they are quite useful too. And hence, blockr lets you activate and deactivate focus mode, so that you are able to access blocked websites when you are relaxing.
 
 ## Installation
+You can install blockr using following command
+```
+$ sudo gem install blockr
+```
 
 
 ## Usage/Commands
 ### block (shortcut b or -b)
 Use this command to block any website you want. It can take one or more websites as input, just separate them by space.
 Please take care to add the exact website URL you want to block - a few websites add www as a subdomain and to block them you will have to add that to in the name of the website.
-**Examples**
+
+**examples**
 ```
 $ # block youtube
-$ sudo blocky block www.youtube.com
+$ sudo blockr block www.youtube.com
 
 $ # use shortcut -b to block youtube
-$ sudo blocky -b www.youtube.com
+$ sudo blockr -b www.youtube.com
 
 $ # block multiple websites in one shot
-$ sudo blocky -b www.facebook.com www.youtube.com
+$ sudo blockr -b www.facebook.com www.youtube.com
 
 $ # take care to provide exact URLs you want to block
-$ sudo blocky -b www.facebook.com m.facebook.com
+$ sudo blockr -b www.facebook.com m.facebook.com
 ```
 
 ### unblock (shortcut u or -u)
-Use this command to unblock any website you have previously blocked using blocky. It can take one or more space separated websites as input.
+Use this command to unblock any website you have previously blocked using blockr. It can take one or more space separated websites as input.
 
 It is a safe command, and does not return error if website was not blocked.
+
+**examples**
 ```
 $ # unblock youtube
-$ sudo blocky unblock www.youtube.com
+$ sudo blockr unblock www.youtube.com
 
 $ # use shortcut -u to unblock youtube
-$ sudo blocky -u www.youtube.com
+$ sudo blockr -u www.youtube.com
 
 $ # unblock multiple websites in one shot
-$ sudo blocky -u www.facebook.com www.youtube.com
+$ sudo blockr -u www.facebook.com www.youtube.com
 
 $ # take care to provide exact URLs you want to unblock
-$ sudo blocky -u www.facebook.com m.facebook.com
+$ sudo blockr -u www.facebook.com m.facebook.com
 ```
 
 ### activate (shortcut a or -a)
-Use this command to activate focus mode. This is a sort of shortcut to block all the websites you have added to blocky and remove all the distracting websites.
+Use this command to activate focus mode. This is a sort of shortcut to block all the websites you have added to blockr and remove all the distracting websites.
 
+**examples**
 ```
 $ # activate focus mode
-$ sudo blocky -activate
+$ sudo blockr -activate
 
 $ # use shortcut -a to activate focus mode
-$ sudo blocky -a
+$ sudo blockr -a
 ```
 
 ### deactivate (shortcut d or -d)
-Use this command to deactivate focus mode. This unblocks all the websites you have added to blocky.
+Use this command to deactivate focus mode. This unblocks all the websites you have added to blockr.
 
+**examples**
 ```
 $ # deactivate focus mode
-$ sudo blocky deactivate
+$ sudo blockr deactivate
 
 $ # use shortcut -d to deactivate focus mode
-$ sudo blocky -d
+$ sudo blockr -d
 ```
 
 ### help (or -h)
-Use this command to know more about blocky commands. You can also use this command with other commands to get command specific help.
+Use this command to know more about blockr commands. You can also use this command with other commands to get command specific help.
 
+**examples**
 ```
-$ # see all blocky commands
-$ sudo blocky help
+$ # see all blockr commands
+$ sudo blockr help
 
 $ # get help with respect to a particular command
-$ sudo blocky activate -h
+$ sudo blockr activate -h
 ```
 
-###### Please Note
-* Given we are modifying /etc/hosts file, you will have to run blocky as an administrator or as a root user.
-* blocky also uses special markers to identify changes done by it, so please don’t manually update entries added by blocky, use blocky commands instead
+**Please Note**
+* Given we are modifying /etc/hosts file, you will have to run blockr as an administrator or as a root user.
+* blockr also uses special markers to identify changes done by it, so please don’t manually update entries added by blockr, use blockr commands instead.
+* blockr at the moment clears DNS cache for Apple's OSX systems. Please see [this link](http://www.abhinav.co/clear-dns-cache.html) to find out command specific to your platform.
 
 ### TODO
 * Write tests
@@ -96,12 +107,12 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/abhinavs/blocky. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/blocky/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/abhinavs/blockr. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/blockr/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## Code of Conduct
 
-Everyone interacting in the Blocky project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/blocky/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the blockr project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/blockr/blob/master/CODE_OF_CONDUCT.md).
 
 ## Copyright
 

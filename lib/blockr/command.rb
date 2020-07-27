@@ -2,7 +2,7 @@
 
 require 'forwardable'
 
-module Blocky
+module Blockr
   class Command
     extend Forwardable
 

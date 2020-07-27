@@ -1,10 +1,10 @@
-require 'blocky/commands/activate'
+require 'blockr/commands/activate'
 
-RSpec.describe Blocky::Commands::Activate do
+RSpec.describe Blockr::Commands::Activate do
   it "executes `activate` command successfully" do
     output = StringIO.new
     options = {}
-    command = Blocky::Commands::Activate.new(options)
+    command = Blockr::Commands::Activate.new(options)
 
     command.execute(output: output)
 

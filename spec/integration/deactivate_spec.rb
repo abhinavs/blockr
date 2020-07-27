@@ -1,9 +1,9 @@
-RSpec.describe "`blocky deactivate` command", type: :cli do
-  it "executes `blocky help deactivate` command successfully" do
-    output = `blocky help deactivate`
+RSpec.describe "`blockr deactivate` command", type: :cli do
+  it "executes `blockr help deactivate` command successfully" do
+    output = `blockr help deactivate`
     expected_output = <<-OUT
 Usage:
-  blocky deactivate
+  blockr deactivate
 
 Options:
   -h, [--help], [--no-help]  # Display usage information

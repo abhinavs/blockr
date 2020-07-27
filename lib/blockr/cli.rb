@@ -2,7 +2,7 @@
 
 require 'thor'
 
-module Blocky
+module Blockr
   # Handle the application command line parsing
   # and the dispatch to various command objects
   #
@@ -11,10 +11,10 @@ module Blocky
     # Error raised by this runner
     Error = Class.new(StandardError)
 
-    desc 'version', 'blocky version'
+    desc 'version', 'blockr version'
     def version
       require_relative 'version'
-      puts "v#{Blocky::VERSION}"
+      puts "v#{Blockr::VERSION}"
     end
     map %w(--version -v) => :version
 
@@ -26,12 +26,12 @@ module Blocky
         invoke :help, ['deactivate']
       else
         require_relative 'commands/deactivate'
-        Blocky::Commands::Deactivate.new(options).execute
+        Blockr::Commands::Deactivate.new(options).execute
       end
     end
     map %w(--deactivate -d) => :deactivate
 
-    desc 'activate', 'activate blocky, make all websites blocked by blocky inaccessible; shortcut -a'
+    desc 'activate', 'activate blockr, make all websites blocked by blockr inaccessible; shortcut -a'
     method_option :help, aliases: '-h', type: :boolean,
                          desc: 'Display usage information'
     def activate(*)
@@ -39,7 +39,7 @@ module Blocky
         invoke :help, ['activate']
       else
         require_relative 'commands/activate'
-        Blocky::Commands::Activate.new(options).execute
+        Blockr::Commands::Activate.new(options).execute
       end
     end
     map %w(--activate -a) => :activate
@@ -52,7 +52,7 @@ module Blocky
         invoke :help, ['unblock']
       else
         require_relative 'commands/unblock'
-        Blocky::Commands::Unblock.new(websites, options).execute
+        Blockr::Commands::Unblock.new(websites, options).execute
       end
     end
     map %w(--unblock -u) => :unblock
@@ -65,7 +65,7 @@ module Blocky
         invoke :help, ['block']
       else
         require_relative 'commands/block'
-        Blocky::Commands::Block.new(websites, options).execute
+        Blockr::Commands::Block.new(websites, options).execute
       end
     end
     map %w(--block -b) => :block
